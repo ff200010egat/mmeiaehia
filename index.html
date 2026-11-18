@@ -29,7 +29,10 @@ small,.note{color:var(--mute);font-size:.85rem;line-height:1.6}
 section{padding:96px 0}
 .eyebrow{font-size:.85rem;letter-spacing:.14em;color:var(--acc);font-weight:600;margin-bottom:10px}
 .lead{font-size:1.2rem;color:var(--mute);max-width:44em;font-weight:300}
-.mine{--acc:var(--earth)}
+.plant{--soft:#eef4fc;--tint:#dce8f9}
+.mine{--acc:var(--earth);--soft:#f8f2e7;--tint:#efe0c6}
+.plant .chapter,.mine .chapter{background:linear-gradient(180deg,var(--tint),var(--soft) 85%)}
+.plant .eyebrow::before,.mine .eyebrow::before{content:"";display:inline-block;width:.6em;height:.6em;border-radius:50%;background:var(--acc);margin-right:.6em}
 
 /* nav + progress */
 nav{position:fixed;inset:0 0 auto 0;z-index:10;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);font-size:.9rem}
@@ -39,6 +42,7 @@ nav a:first-child{color:var(--ink);font-weight:600;margin-right:auto}
 #bar{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--yellow)}
 
 /* hero */
+.hero-logo{height:56px;width:auto;margin-bottom:22px}
 .hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding-top:110px}
 .hero .lead{margin:22px 0 44px}
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
@@ -169,6 +173,8 @@ figcaption{font-size:.85rem;color:var(--mute);margin-top:10px;line-height:1.55}
 .end{position:relative;color:#fff;text-align:center;padding:0;min-height:80vh;display:flex;align-items:center;background:#0c1b3a}
 .end img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45}
 .end .wrap{position:relative}
+footer .credit{display:flex;align-items:center;gap:14px;font-size:.95rem;color:var(--ink);font-weight:500;margin-bottom:14px;padding-bottom:14px;border-bottom:3px solid var(--yellow);width:fit-content;max-width:100%}
+footer .credit img{height:44px;width:auto}
 footer{padding:28px 0;font-size:.8rem;color:var(--mute);border-top:1px solid var(--line)}
 
 @media (max-width:900px){
@@ -221,7 +227,7 @@ footer{padding:28px 0;font-size:.8rem;color:var(--mute);border-top:1px solid var
 
 <!-- ============ HERO ============ -->
 <header class="hero" id="top"><div class="wrap">
-  <div class="eyebrow">สรุปเข้าใจง่าย · 18 พฤศจิกายน 2569</div>
+  <img class="hero-logo" src="assets/egat-logo.png" alt="กฟผ."><div class="eyebrow">ข้อมูล ณ วันที่ 18 พฤศจิกายน 2569 · จัดทำโดย กสพ-ช.</div>
   <h1>แม่เมาะกำลังจะเปลี่ยนอะไร</h1>
   <p class="lead">การไฟฟ้าฝ่ายผลิตแห่งประเทศไทย (กฟผ.) กำลังศึกษาเพื่อขอเปลี่ยนแปลงรายละเอียดโครงการ 2 เรื่องที่เกี่ยวข้องกัน คือ โรงไฟฟ้าแม่เมาะ และเหมืองลิกไนต์แม่เมาะ หน้านี้เล่าว่าเปลี่ยนอะไร เพราะอะไร และศึกษาผลกระทบอย่างไร</p>
   <div class="duo">
@@ -244,6 +250,7 @@ footer{padding:28px 0;font-size:.8rem;color:var(--mute);border-top:1px solid var
 </div></section>
 
 <!-- ============ CHAPTER 1 : PLANT ============ -->
+<div class="plant">
 <div class="chapter" id="plant"><div class="wrap">
   <div class="no">01</div>
   <h2>โรงไฟฟ้าแม่เมาะ</h2>
@@ -350,6 +357,7 @@ footer{padding:28px 0;font-size:.8rem;color:var(--mute);border-top:1px solid var
   </div>
 </div></section>
 
+</div>
 <!-- ============ CHAPTER 2 : MINE ============ -->
 <div class="mine">
 <div class="chapter" id="mine"><div class="wrap">
@@ -574,7 +582,7 @@ footer{padding:28px 0;font-size:.8rem;color:var(--mute);border-top:1px solid var
   <p style="opacity:.85">ข้อเสนอแนะจะถูกนำไปปรับแผนการศึกษาและการทำงานในพื้นที่</p>
 </div></section>
 
-<footer><div class="wrap">สรุปจากสไลด์นำเสนอ 2 ชุด: “การเปลี่ยนแปลงรายละเอียดโครงการฯ โครงการโรงไฟฟ้าแม่เมาะ (ครั้งที่ 3)” และ “โครงการเหมืองแร่ลิกไนต์แม่เมาะ (ครั้งที่ 1)” · ภาพทั้งหมดมาจากสไลด์ต้นฉบับ · ตัวเลขมลสารเป็นข้อมูลเบื้องต้นระหว่างการศึกษา</div></footer>
+<footer><div class="wrap"><div class="credit"><img src="assets/egat-logo.png" alt="กฟผ."><span>จัดทำโดย กองสื่อสารสัมพันธ์และพัฒนาชุมชน (กสพ-ช.)</span></div>สรุปจากสไลด์นำเสนอ 2 ชุด: “การเปลี่ยนแปลงรายละเอียดโครงการฯ โครงการโรงไฟฟ้าแม่เมาะ (ครั้งที่ 3)” และ “โครงการเหมืองแร่ลิกไนต์แม่เมาะ (ครั้งที่ 1)” · ภาพทั้งหมดมาจากสไลด์ต้นฉบับ · ตัวเลขมลสารเป็นข้อมูลเบื้องต้นระหว่างการศึกษา</div></footer>
 
 <script>
 // แถบความคืบหน้า + เผยเนื้อหา + สลับภาพตามขั้นที่เลื่อนถึง
